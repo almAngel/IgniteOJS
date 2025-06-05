@@ -7,10 +7,11 @@
 - [Importing an Existing Project](#importing-an-existing-project)
 - [Starting from scratch](#starting-from-scratch)
 - [Bonus: Automated Export Script](#bonus-automated-export-script)
+- [Common Errors and Solutions](#common-errors-and-solutions)
+  - [The directory specified for uploaded files does not exist or is not writable](#error-the-directory-specified-for-uploaded-files-does-not-exist-or-is-not-writable)
 - [Related LinkedIn Post](#related-linkedin-post)
 - [Connect](#connect)
   - [Who am I?](#who-am-i)
-- [Common Errors and Solutions](#common-errors-and-solutions)
 - [Keywords](#keywords)
 
 ## Project Description
@@ -79,23 +80,6 @@ bash ojs-export.sh
 
 This will save you time and help avoid mistakes during the export process!
 
-## Related LinkedIn Post
-
-🔗 **Check out the announcement and discussion about this project on LinkedIn:**  
-[IgniteOJS on LinkedIn](https://www.linkedin.com/posts/angellopezmolina_github-almangeligniteojs-igniteojs-is-activity-7336332668684398592-pU0g?utm_source=share&utm_medium=member_desktop&rcm=ACoAACAQf34B-_dlrGkByvWQv1hWwvJka_3GsHU)
-
-Feel free to join the conversation, leave your feedback, or share your experience with IgniteOJS!
-
-## Connect
-
-👉 **[Connect with the author on LinkedIn!](https://www.linkedin.com/in/angellopezmolina/)** 👈
-
-### Who am I?
-
-I am a Software Developer based in Málaga, with experience in multiple programming languages and technologies. I am passionate about creating robust software and scalable solutions, always with a self-taught and scientific mindset. My approach is practical, focusing on the choice of technologies and the design of efficient solutions, with knowledge of basic architecture and participation in technical decisions aimed at solving real-world problems.
-
-You can find more about my professional background, projects, and contributions on my [LinkedIn profile](https://www.linkedin.com/in/angellopezmolina/).
-
 ## Common Errors and Solutions
 
 ### Error: The directory specified for uploaded files does not exist or is not writable
@@ -115,6 +99,23 @@ chmod -R 777 ./volumes
 
 This will grant full read/write access to the `volumes` directory and its contents.  
 **Note:** For production environments, adjust permissions according to your security requirements.
+
+## Related LinkedIn Post
+
+🔗 **Check out the announcement and discussion about this project on LinkedIn:**  
+[IgniteOJS on LinkedIn](https://www.linkedin.com/posts/angellopezmolina_github-almangeligniteojs-igniteojs-is-activity-7336332668684398592-pU0g?utm_source=share&utm_medium=member_desktop&rcm=ACoAACAQf34B-_dlrGkByvWQv1hWwvJka_3GsHU)
+
+Feel free to join the conversation, leave your feedback, or share your experience with IgniteOJS!
+
+## Connect
+
+👉 **[Connect with the author on LinkedIn!](https://www.linkedin.com/in/angellopezmolina/)** 👈
+
+### Who am I?
+
+I am a Software Developer based in Málaga, with experience in multiple programming languages and technologies. I am passionate about creating robust software and scalable solutions, always with a self-taught and scientific mindset. My approach is practical, focusing on the choice of technologies and the design of efficient solutions, with knowledge of basic architecture and participation in technical decisions aimed at solving real-world problems.
+
+You can find more about my professional background, projects, and contributions on my [LinkedIn profile](https://www.linkedin.com/in/angellopezmolina/).
 
 ## Keywords
 ojs, open journal systems, scholarly publishing, academic journal, docker, ojs development, pkp, open access, fast setup, ojs docker, ojs quickstart, igniteojs, containerization, php, mysql, mariadb, journal migration, scholarly communication, research publishing, open source, journal hosting, scientific publishing, journal workflow, plugin development, ojs backup, ojs restore
