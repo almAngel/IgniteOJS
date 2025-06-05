@@ -19,16 +19,16 @@ If you already have an existing project and want to import it into this environm
 ## Starting from scratch
 1. Clean reset of containers:
    ```bash
-   docker-compose down -v
-   docker-compose up -d
+   docker compose down -v
+   docker compose up -d
    ```
 2. Regular OJS installation: Access the OJS web interface in your browser and complete the installation process as usual.
 3. Create a journal to have sample data.
-4. Create a database dump from the database container and export it to the `/volumes/import` folder:
+4. Create a database dump from the database container and export it to the `/volumes/import` folder (using a temporary container with mysqldump):
    ```bash
-   docker exec ojs_db_${COMPOSE_PROJECT_NAME} mysqldump -u$OJS_DB_USER -p$OJS_DB_PASSWORD $OJS_DB_NAME > ./volumes/import/dump.sql
+   docker run --rm --network container:ojs_db_${COMPOSE_PROJECT_NAME} -e MYSQL_PWD=$OJS_DB_PASSWORD mysql:8 mysqldump --column-statistics=0 -h127.0.0.1 -u$OJS_DB_USER $OJS_DB_NAME > ./volumes/import/dump.sql
    ```
-   Replace `$OJS_DB_USER`, `$OJS_DB_PASSWORD`, and `$OJS_DB_NAME` with your actual environment variable values if different.
+   Replace `$COMPOSE_PROJECT_NAME`, `$OJS_DB_USER`, `$OJS_DB_PASSWORD`, and `$OJS_DB_NAME` with your actual environment variable values if different.
 5. Export data from inside the container:
    - From `/var/www/files` to `/volumes/import/private`:
      ```bash
@@ -38,6 +38,21 @@ If you already have an existing project and want to import it into this environm
      ```bash
      docker cp ojs_app_${COMPOSE_PROJECT_NAME}:/var/www/html/public/. ./volumes/import/public/
      ```
+   - Export the entire `/var/www/html` directory to `/volumes/html`:
+     ```bash
+     docker cp ojs_app_${COMPOSE_PROJECT_NAME}:/var/www/html/. ./volumes/html/
+     ```
+6. Uncomment the following line in your `docker-compose.yml` file to mount the exported html directory:
+   ```yaml
+   - ./volumes/html:/var/www/html
+   ```
+   This ensures that the exported `/var/www/html` directory from the container is used by the OJS service.
+7. Change permissions recursively on the `html` folder to allow modifications:
+   ```bash
+   chmod -R 777 ./volumes/html
+   ```
+   This ensures you have full read/write access to the exported html directory.
+8. Ready! Now you can safely develop and test your own plugins or customizations without risking your production server.
 
 ## Keywords
 ojs, open journal systems, scholarly publishing, academic journal, docker, ojs development, pkp, open access, fast setup, ojs docker, ojs quickstart, igniteojs
