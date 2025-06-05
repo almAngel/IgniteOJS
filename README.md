@@ -8,6 +8,8 @@
 - [Starting from scratch](#starting-from-scratch)
 - [Bonus: Automated Export Script](#bonus-automated-export-script)
 - [Keywords](#keywords)
+- [Connect](#connect)
+  - [Who am I?](#who-am-i)
 
 ## Project Description
 This project provides a fast and easy setup for Open Journal Systems (OJS) using Docker. It is designed for scholarly publishing and academic journal management, enabling quick deployment and development of OJS environments. The repository includes Docker configurations, import scripts, and volume management to streamline OJS installation, database restoration, and file handling. Ideal for developers, journal managers, and institutions seeking an open access, containerized OJS solution with minimal setup effort.
@@ -76,4 +78,16 @@ bash ojs-export.sh
 This will save you time and help avoid mistakes during the export process!
 
 ## Keywords
-ojs, open journal systems, scholarly publishing, academic journal, docker, ojs development, pkp, open access, fast setup, ojs docker, ojs quickstart, igniteojs
+ojs, open journal systems, scholarly publishing, academic journal, docker, ojs development, pkp, open access, fast setup, ojs docker, ojs quickstart, igniteojs, containerization, php, mysql, mariadb, journal migration, scholarly communication, research publishing, open source, journal hosting, scientific publishing, journal workflow, plugin development, ojs backup, ojs restore
+
+## Connect
+
+👉 **[Connect with the author on LinkedIn!](https://www.linkedin.com/in/angellopezmolina/)** 👈
+
+### Who am I?
+
+I am a Software Developer based in Málaga, with experience in multiple programming languages and technologies. I am passionate about creating robust software and scalable solutions, always with a self-taught and scientific mindset. My approach is practical, focusing on the choice of technologies and the design of efficient solutions, with knowledge of basic architecture and participation in technical decisions aimed at solving real-world problems.
+
+You can find more about my professional background, projects, and contributions on my [LinkedIn profile](https://www.linkedin.com/in/angellopezmolina/).
+
+---
