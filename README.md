@@ -4,8 +4,10 @@
 ## Table of Contents
 - [Project Description](#project-description)
 - [Background](#background)
-- [Keywords](#keywords)
 - [Importing an Existing Project](#importing-an-existing-project)
+- [Starting from scratch](#starting-from-scratch)
+- [Bonus: Automated Export Script](#bonus-automated-export-script)
+- [Keywords](#keywords)
 
 ## Project Description
 This project provides a fast and easy setup for Open Journal Systems (OJS) using Docker. It is designed for scholarly publishing and academic journal management, enabling quick deployment and development of OJS environments. The repository includes Docker configurations, import scripts, and volume management to streamline OJS installation, database restoration, and file handling. Ideal for developers, journal managers, and institutions seeking an open access, containerized OJS solution with minimal setup effort.
@@ -53,6 +55,25 @@ If you already have an existing project and want to import it into this environm
    ```
    This ensures you have full read/write access to the exported html directory.
 8. Ready! Now you can safely develop and test your own plugins or customizations without risking your production server.
+
+## Bonus: Automated Export Script
+
+**🚨 BONUS: Automated Export Script! (BETA) 🚨**
+
+We have included a script called `ojs-export.sh` that automates the export steps described in the "Starting from scratch" section above. This script will:
+- Export your database
+- Export your private and public files
+- Export the entire html directory
+- Set the correct permissions automatically
+
+⚠️ **IMPORTANT:** You must still perform the manual steps first (OJS installation and journal creation via the web interface) before running the script. The script assumes your OJS instance is already set up and running.
+
+To use it, simply run:
+```bash
+bash ojs-export.sh
+```
+
+This will save you time and help avoid mistakes during the export process!
 
 ## Keywords
 ojs, open journal systems, scholarly publishing, academic journal, docker, ojs development, pkp, open access, fast setup, ojs docker, ojs quickstart, igniteojs
