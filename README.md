@@ -10,6 +10,7 @@
 - [Related LinkedIn Post](#related-linkedin-post)
 - [Connect](#connect)
   - [Who am I?](#who-am-i)
+- [Common Errors and Solutions](#common-errors-and-solutions)
 - [Keywords](#keywords)
 
 ## Project Description
@@ -94,6 +95,26 @@ Feel free to join the conversation, leave your feedback, or share your experienc
 I am a Software Developer based in Málaga, with experience in multiple programming languages and technologies. I am passionate about creating robust software and scalable solutions, always with a self-taught and scientific mindset. My approach is practical, focusing on the choice of technologies and the design of efficient solutions, with knowledge of basic architecture and participation in technical decisions aimed at solving real-world problems.
 
 You can find more about my professional background, projects, and contributions on my [LinkedIn profile](https://www.linkedin.com/in/angellopezmolina/).
+
+## Common Errors and Solutions
+
+### Error: Insufficient permissions on the `volumes` directory
+
+**Symptom:**  
+OJS displays an error during installation "Errors occurred during installation: The directory specified for uploaded files does not exist or is not writable".
+
+**Cause:**  
+The user running the container does not have the necessary read/write permissions on the mounted `./volumes` directories.
+
+**Solution:**  
+Ensure the correct permissions are set by running:
+
+```bash
+chmod -R 777 ./volumes
+```
+
+This will grant full read/write access to the `volumes` directory and its contents.  
+**Note:** For production environments, adjust permissions according to your security requirements.
 
 ## Keywords
 ojs, open journal systems, scholarly publishing, academic journal, docker, ojs development, pkp, open access, fast setup, ojs docker, ojs quickstart, igniteojs, containerization, php, mysql, mariadb, journal migration, scholarly communication, research publishing, open source, journal hosting, scientific publishing, journal workflow, plugin development, ojs backup, ojs restore
