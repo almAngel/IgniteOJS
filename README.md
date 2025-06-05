@@ -98,7 +98,7 @@ You can find more about my professional background, projects, and contributions 
 
 ## Common Errors and Solutions
 
-### Error: Insufficient permissions on the `volumes` directory
+### Error: The directory specified for uploaded files does not exist or is not writable
 
 **Symptom:**  
 OJS displays an error during installation "Errors occurred during installation: The directory specified for uploaded files does not exist or is not writable".
