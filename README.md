@@ -8,6 +8,7 @@
 - [Starting from scratch](#starting-from-scratch)
 - [Bonus: Automated Export Script](#bonus-automated-export-script)
 - [Keywords](#keywords)
+- [Related LinkedIn Post](#related-linkedin-post)
 - [Connect](#connect)
   - [Who am I?](#who-am-i)
 
@@ -79,6 +80,13 @@ This will save you time and help avoid mistakes during the export process!
 
 ## Keywords
 ojs, open journal systems, scholarly publishing, academic journal, docker, ojs development, pkp, open access, fast setup, ojs docker, ojs quickstart, igniteojs, containerization, php, mysql, mariadb, journal migration, scholarly communication, research publishing, open source, journal hosting, scientific publishing, journal workflow, plugin development, ojs backup, ojs restore
+
+## Related LinkedIn Post
+
+🔗 **Check out the announcement and discussion about this project on LinkedIn:**  
+[IgniteOJS on LinkedIn](https://www.linkedin.com/posts/angellopezmolina_github-almangeligniteojs-igniteojs-is-activity-7336332668684398592-pU0g?utm_source=share&utm_medium=member_desktop&rcm=ACoAACAQf34B-_dlrGkByvWQv1hWwvJka_3GsHU)
+
+Feel free to join the conversation, leave your feedback, or share your experience with IgniteOJS!
 
 ## Connect
 
